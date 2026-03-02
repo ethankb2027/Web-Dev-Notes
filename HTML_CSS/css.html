@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h2{
+            color: blue; 
+        }
+    </style> <!-- Internal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e81b4bc09e.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <header></header>
+
+    <!-- INTRO TO CSS📃 -->
+    
+    <!-- Three ways to apply CSS: Inline, Internal, External (most popular due to changeablility) -->
+    
+    <p style="color: aqua;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Quasi aperiam iusto error molestias ratione itaque quas enim, quaerat esse 
+        doloribus ut voluptate nemo ea? Hic porro optio sequi animi asperiores.</p> <!-- Inline -->
+    
+    <h2>This is internal CSS</h2> <!-- Internal -->
+    
+    <h3>External CSS</h3>
+
+    <p id="p1" class="odd">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Quasi aperiam iusto error molestias ratione itaque quas enim, quaerat esse 
+        doloribus ut voluptate nemo ea? Hic porro optio sequi animi asperiores.</p> <!-- External -->
+
+    <p id="p1" class="even">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Quasi aperiam iusto error molestias ratione itaque quas enim, quaerat esse 
+        doloribus ut voluptate nemo ea? Hic porro optio sequi animi asperiores.</p> <!-- External -->
+
+    <!-- COLORS💥 --> <br><hr><br>
+
+    <p style="color: aquamarine;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusamus.</p>
+    <p style="color: rgb(123, 123, 123);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusamus.</p>
+    <p style="color: #5f5f5f;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusamus.</p>
+    <p style="color: hsl(0, 51%, 50%);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusamus.</p>
+
+    <!-- FONTS😍 --> <br><hr><br>
+
+    <p style="font-family: verdana, arial;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consequatur dolore voluptatem cum velit exercitationem.
+    </p>
+   
+    <p id="sans">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+    
+    <p id="playwrite">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+
+    <!-- BORDERS🌮 --> <br><hr><br>
+
+    <h1 style="border: 3px ridge rgb(46, 100, 193);
+    border-radius: 10px;">Title Here</h1>
+
+    <p class="borders">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis eum dolorem est quasi cumque</p>
+
+    <!-- SHADOWS🕶️ --> <br><hr style="height: 100px; background-color:hsl(0, 68%, 49%);"><br>
+
+    <h1 id="shadow1">O</h1>
+
+    <div class="shadow2"></div>
+
+    <!-- MARGINS😁 --> <br><hr><br>
+
+    <div class="marginClass" id="box1">Box 1</div>
+    <div class="marginClass" id="box2">Box 2</div>
+
+    <!-- FLOAT☁️ --> <br><hr><br>
+
+    <div style="border: 10px solid" id="floatBorder">
+
+        <img src="images/easyFace.png" id="pic1">
+        <p style="font-size: 3em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, officia voluptas.</p>
+        <p style="font-size: 3em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, officia voluptas.</p>
+        <p style="font-size: 3em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, officia voluptas.</p>
+        <p style="font-size: 3em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, officia voluptas.</p>
+        <img src="images/demonFace.png" id="pic2">
+        <p style="font-size: 3em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, officia voluptas.</p>
+        <p style="font-size: 3em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, officia voluptas.</p>
+        <p style="font-size: 3em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, officia voluptas.</p>
+
+    </div>
+
+    <!-- OVERLFLOW🌊 --> <br><hr><br>
+
+    <div id="overflow1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quis reprehenderit ipsa quod officiis necessitatibus alias praesentium ab rerum pariatur aut repudiandae tempore cum veritatis unde commodi, vel optio nulla.
+    </div><br>
+    
+    <div id="overflow2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quis reprehenderit ipsa quod officiis necessitatibus alias praesentium ab rerum pariatur aut repudiandae tempore cum veritatis unde commodi, vel optio nulla.
+    </div><br>
+    
+    <div id="overflow3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quis reprehenderit ipsa quod officiis necessitatibus alias praesentium ab rerum pariatur aut repudiandae tempore cum veritatis unde commodi, vel optio nulla.
+    </div><br>
+    
+    <div id="overflow4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quis reprehenderit ipsa quod officiis necessitatibus alias praesentium ab rerum pariatur aut repudiandae tempore cum veritatis unde commodi, vel optio nulla.
+    </div><br>
+    
+    <div id="overflow5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quis reprehenderit ipsa quod officiis necessitatibus alias praesentium ab rerum pariatur aut repudiandae tempore cum veritatis unde commodi, vel optio nulla.
+    </div><br>
+
+    <!-- DISPLAY PROPERTY📺 --> <br><hr><br>
+
+    <div id="div1">div1</div>
+    <div id="div2">div2</div>
+    <div id="div3">div3</div>
+    <div id="div4">div4</div>
+    <div id="div5">div5</div>
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, ullam natus explicabo sit laborum doloribus eum deleniti eligendi corrupti reprehenderit dicta nam perferendis asperiores magni itaque ipsam, dignissimos ipsa beatae?
+
+    <!-- HEIGHT & WIDTH🩳 --> <br><hr><br>
+
+    <div class="container">
+        <div class="boxHW">
+            <h3>This is #1</h3>
+        </div>
+        <div class="boxHW">
+            <h3>This is #2</h3>
+        </div>
+    </div>
+
+    <!-- POSITIONS🕺 --> <br><hr><br>
+
+    <div id="posBigBox">
+        <div id="posBox1"></div>
+        <div id="posBox2">
+            <div id="posBox3"></div>
+        </div>
+        <div id="posBox4"></div>
+        <div id="posBox5"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe doloribus iure porro provident fugit, neque, ipsam minus nihil quisquam totam ad sequi nobis minima! Assumenda provident ut quae odio possimus?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe doloribus iure porro provident fugit, neque, ipsam minus nihil quisquam totam ad sequi nobis minima! Assumenda provident ut quae odio possimus?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe doloribus iure porro provident fugit, neque, ipsam minus nihil quisquam totam ad sequi nobis minima! Assumenda provident ut quae odio possimus?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe doloribus iure porro provident fugit, neque, ipsam minus nihil quisquam totam ad sequi nobis minima! Assumenda provident ut quae odio possimus?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe doloribus iure porro provident fugit, neque, ipsam minus nihil quisquam totam ad sequi nobis minima! Assumenda provident ut quae odio possimus?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe doloribus iure porro provident fugit, neque, ipsam minus nihil quisquam totam ad sequi nobis minima! Assumenda provident ut quae odio possimus?</p>
+    </div>
+    
+    <!-- COMBINATORS🪮 --> <br><hr><br>
+
+    <div id="comFrame">
+        <div id="comContainer">
+            <p>this is text 1</p>
+            <p>this is text 2</p>
+            <div>
+                <p>this is text 3</p>
+            </div>
+        </div>
+        <p>this is text 4</p>
+        <p>this is text 5</p>
+    </div>
+
+    <!-- PSEUDO-CLASSES🥸 --> <br><hr><br>
+
+    <a href="https://www.myinstants.com/en/search/?name=meme" target="_blank" id="pseLink">MEME SOUNBOARD</a> <br><br>
+    
+    <button id="pseButton">Click Me</button> <br><br><br><br><br>
+    
+    <ul id="pseList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+    </ul> 
+
+    <div id="pseGreet"> HOVER OVER ME
+        <p>Hello World</p>
+    </div> <br><br><br><br><br>
+
+    <!-- PSEUDO-ELEMENTS🌦️ --> <br><hr><br>
+
+    <h1 id="pseEleTitle">This is a title</h1>
+
+    <p id="pseEleText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus blanditiis deleniti culpa esse, dolore dolorum? Consequatur voluptatibus, nemo nisi magnam dolor asperiores, quos temporibus quae quo eveniet, ab impedit expedita.</p>
+
+    <ul id="pseEleList">
+        <li id="pseEleApple">Apple</li>
+        <li id="pseEleOrange">Orange</li>
+        <li id="pseEleBanana">Banana</li>
+    </ul>
+
+    <!-- PAGINATION🅿️ --> <br><hr><br>
+
+    <h1><a href="Pagination/page1.html" target="_blank">Pagination Tutorial Website</a></h1>
+
+    <!-- DROPDOWN MENUS📃 --> <br><hr><br>
+
+    <p style="background-color: aliceblue;">Select below what you want:</p>
+
+    <div id="dropMenu">
+        <button>Buy Car</button>
+        <div id="dropContent">
+            <a href="">Toyota Supra</a>
+            <a href="">Mazda MX5</a>
+            <a href="">Dodge Viper</a>
+        </div>
+    </div> <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <!-- NAVIGATION BAR🍺 --> <br><hr><br>
+
+    <a href="Nav Bar/home.html"><h1>Navigation Bar Tutorial</h1></a>
+
+
+    <!-- IMAGE GALLERY🖼️ --> <br><hr><br>
+
+    <div class="imageGallery">
+        <a href="images/angryCar.png" target="_blank">
+            <img src="images/angryCar.png" alt="angry car">
+        </a>
+        <div class="description">Angry Car</div>
+    </div>
+
+    <div class="imageGallery">
+        <a href="images/sillyCar.png" target="_blank">
+            <img src="images/sillyCar.png" alt="silly car">
+        </a>
+        <div class="description">Silly Car</div>
+    </div>
+
+    <div class="imageGallery">
+        <a href="images/shockedCar.png" target="_blank">
+            <img src="images/shockedCar.png" alt="shocked car">
+        </a>
+        <div class="description">Shocked Car</div>
+    </div>
+
+    <!-- ICONS❤️‍🔥 --> <br><hr><br>
+
+    <div class="icons">
+        <a href="">
+            <i class="fa-chisel fa-regular fa-house fa-5x"></i>
+        </a>
+        <a href="https://youtube.com" target="_blank">
+            <i class="fa-brands fa-youtube fa-5x"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank">
+            <i class="fa-brands fa-instagram fa-5x"></i>
+        </a>
+    </div>
+
+    <!-- FLEXBOX📦 --> <br><hr><br>
+
+    <div class="flex1">
+        <div class="flexbox" id="flexbox1box1">1</div>
+        <div class="flexbox" id="flexbox1box2">2</div>
+        <div class="flexbox" id="flexbox1box3">3</div>
+        <div class="flexbox" id="flexbox1box4">4</div>
+    </div>
+
+    <div class="flex2">
+        <div class="flexbox" id="flexbox2box1">1</div>
+        <div class="flexbox" id="flexbox2box2">2</div>
+        <div class="flexbox" id="flexbox2box3">3</div>
+        <div class="flexbox" id="flexbox2box4">4</div>
+    </div>
+
+    <div class="flex3">
+        <div class="flexbox" id="flexbox3box1">1</div>
+        <div class="flexbox" id="flexbox3box2">2</div>
+        <div class="flexbox" id="flexbox3box3">3</div>
+        <div class="flexbox" id="flexbox3box4">4</div>
+    </div>
+
+    <div class="flex4">
+        <div class="flexbox" id="flexbox4box1">1</div>
+        <div class="flexbox" id="flexbox4box2">2</div>
+        <div class="flexbox" id="flexbox4box3">3</div>
+        <div class="flexbox" id="flexbox4box4">4</div>
+        <div class="flexbox" id="flexbox4box5">5</div>
+        <div class="flexbox" id="flexbox4box6">6</div>
+        <div class="flexbox" id="flexbox4box7">7</div>
+        <div class="flexbox" id="flexbox4box8">8</div>
+    </div>
+
+    <!-- TRANSFORMATIONS🚙 --> <br><hr><br>
+
+    <div class="transFrame">
+        <div class="transBox1">Box 1</div>
+        <div class="transBox2">Box 2</div>
+        <div class="transBox3">Box 3</div>
+    </div>
+
+    <!-- ANIMATIONS📻 --> <br><hr><br>
+
+    <div class="animFrame">
+        <div class="animBox">Box</div>
+        <div class="animBox1">Box1</div>
+        <div class="animBox2">Box2</div>
+    </div>
+
+</body>
+
+</html>

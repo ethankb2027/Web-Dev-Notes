@@ -1,0 +1,38 @@
+
+#title{
+    font-family: 10em;
+    text-align: center;
+}
+
+#number{
+    text-align: center;
+    font-size: 10em;
+    font-family: Verdana;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#buttons{
+    text-align: center;
+}
+
+#buttons button{
+    height: 100px;
+    width: auto;
+    font-size: 4em;
+    padding: 15px;
+    border-radius: 5px;
+    border-width: 3px;
+    background-color: rgb(176, 176, 255);
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+#buttons button:hover{
+    background-color: rgb(117, 191, 255);
+}
+
+#buttons button:active{
+    background-color: rgb(255, 117, 117);
+    border-width: 5px;
+}
