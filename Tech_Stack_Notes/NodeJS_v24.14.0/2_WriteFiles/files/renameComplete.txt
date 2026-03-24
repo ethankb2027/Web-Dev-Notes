@@ -1,0 +1,5 @@
+This message is from "starter.txt".
+
+This message was appended.
+
+This message came from "append.txt".

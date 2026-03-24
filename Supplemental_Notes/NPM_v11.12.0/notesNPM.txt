@@ -1,0 +1,164 @@
+
+--- 1. What is NPM? How is it related to Node? ---
+
+    npm used to be independent until it was bought by GitHub, which is owned by Microsoft.
+    The standard package manager for node.
+    npm is like a repository for open-source packages.
+    npm acts as a command line tool to fetch, install, manage, update, ... packages in the node application.
+
+--- 2. NPM vs Yarn ---
+
+                 npm                                 Yarn
+
+        a node package manager ------------- a node package manager
+          owned by Microsoft ----------------- owned by Facebook
+    bit faster on production server --- bit faster on development server
+
+--- 3. Installing NPM and Node on your system ---
+
+    Installation Process (Windows):
+        1. Install node and npm (https://nodejs.org/en/download)
+
+--- 4. Why Node versioning is required? ---
+
+    Node versioning is simultaneously having multiple node versions on a system. This may be preferable for three reasons:
+        1. allows developers to utilize specific node versions for unique use cases
+        2. reduces chances of crashes since some node packages require certain node versions
+        3. ability to experiment with different node versions
+
+--- 5. Managing multiple Node versions using `n` ---
+
+    'n' isn't supported on Windows. Instead, Windows needs the following to manage node versions: https://github.com/nvm-sh/nvm.
+
+--- 6. What is an NPM module? ---
+
+    When a dev installs a node package, the source (located in npm's infrastructure) is extracted and placed in a "node_modules" folder.
+    Most of the time, code within a package isn't the same between GitHub and npm.
+
+--- 7. How does NPM install module? ---
+
+    When the npm install command is sent in the terminal, the following happens:
+        1. npm takes the package's tarball URL from npm's database
+        2. executes the URL, which downloads the package and its contents
+
+--- 8. package.json file ---
+
+    npm manages node modules/packages through the package.json file.
+    The file is like a record of all the packages installed which npm uses to remember and manage them.
+
+--- 9. Exploring package.json ---
+
+    When the command "npm init" is ran and all questions are answered, a fresh package.json file is created.
+    The following is an example new package.json file:
+        {
+            "name": "playground",
+            "version": "1.0.0",
+            "description": "",
+            "license": "ISC",
+            "author": "",
+            "type": "commonjs",
+            "main": "playground.js",
+            "scripts": {
+                "test": "echo \"Error: no test specified\" && exit 1"
+            }
+        }
+
+--- 10. Installing module ---
+
+    "npm install packageName" and "npm i packageName" in the terminal installs node modules.
+    If the dev attempts to install a package that's already installed, npm will update and audit the installed package instead.
+
+--- 11. Removing module ---
+
+    "npm remove packageName" and "npm uninstall packageName" deletes a package from a project.
+
+--- 12. Local v/s global modules ---
+
+    The most common use of a global module is for command line applications.
+    "npm i packageName --global" and "npm i packageName -g" in the terminal installs node modules globally.
+    Global modules should be utilized for personal use and convenience, not for sharing and/or production.
+    "npm root -g" displays the path of the global modules folder.
+
+            Local Modules                     Global Modules
+    installed in a specific path --- installed anywhere and everywhere
+
+--- 13. Semantic Versioning ---
+
+    Every npm package has a standardized version template called semantic versioning.
+    Semantic versioning is a standard for versioning packages (MAJOR.MINOR.PATCH).
+        MAJOR - a version when you make incompatible API changes ---------------------- breaking changes
+        MINOR - a version when you add functionality in a backwards compatible manner - no breaking changes
+        PATCH - a version when you make backwards compatible bug fixes ---------------- no breaking changes (99.99% of the time)
+    npm follows semantic versioning, but npm doesn't enforce it on packages. In other words, packages could lie within their semantic versioning.
+
+--- 14. All about package-lock.json ---
+
+    In package.json, the package version states what version the package is allowed to update to when it's installed (MAJOR, MINOR, PATCH). When the package is
+    actually installed/updated, the cascading package.json files are created/updated to the most up-to-date version of the package as allowed by package.json. However,
+    semantic versioning isn't usually followed by the packages, so updating something that seems to be minor could be a breaking change. Thus, package-lock.json files
+    exist to prevent something like this from happening by essentially taking a screenshot of all packages and their versions and "locking it" within its file so that
+    the collection of package versions we know work together are used throughout development and production without having anything burn up.
+
+--- 15. Semantic versioning in package.json ---
+
+    In package.json, the package and version states what can be updated based on semantic versioning.
+        NOTE: x means update that part to the most current one
+        "packageName": "*" ------------------> x.x.x
+        "packageName": "^MAJOR.MINOR.PATCH" -> MAJOR.x.x
+        "packageName": "~MAJOR.MINOR.PATCH" -> MAJOR.MINOR.x
+        "packageName": "MAJOR.MINOR.PATCH" --> MAJOR.MINOR.PATCH
+
+--- 16. dependencies ---
+
+    "npm install" installs/updates all packages under dependencies listed in the package.json file in the local project
+
+--- 17. devDependencies ---
+
+    Dev dependencies are those that are used only in development, not in production (ensure that these packages aren't needed in production).
+    "npm install packageName --save-dev" installs a package as a dev dependency.
+    In development, the "npm install" command will install/update all packages listed under dependencies and devDependencies. However, while in production, 
+    only the packages under dependencies will be installed/updated.
+
+--- 18. peerDependencies ---
+
+    Peer dependencies are not needed when working on your own app; it's needed when creating npm packages.
+    Within some packages, a peer dependency can be found within the package.json file. What the peer dependency is saying is that it needs the packages listed
+    under itself for the package to run. If those packages aren't already in the project, then a warning will be displayed instead of automatically 
+    installing the packages.
+
+--- 19. What are NPM scripts ---
+
+    In a script, the key is the script name, and the value is a bash/terminal script.
+    npm supports many script names, which are documented here: https://docs.npmjs.com/cli/v8/using-npm/scripts. What these specific npm script names do
+    is run the terminal script in a way that the npm script name states.
+    Custom scripts can also be made with custom script names and terminal scripts.
+    Example npm script from package.json that is executed in the terminal with "npm test" or "npm run test":
+        "scripts": {
+            "test": "echo \"Error: no test specified\" && exit 1"
+        }
+    Example custom script from package.json that is executed in the terminal with "npm run custom_name":
+        "scripts": {
+            "custom_name": "custom script"
+        }
+
+--- 20. All about NPX ---
+
+    npx allows devs to run npm tools without installing them globally.
+    Two ways to execute installed package files:
+        1. Create a custom script that runs the package file command
+        2. Enter "npx packageFileCommand"
+    npx can also execute package files globally with the same command. It does this by installing the package, runs it, and then removes it.
+
+--- 21. Changing global packages installation location ---
+
+    "npm config ls -l" lists all of the configurations of npm.
+    "npm config get prefix" displays where the global packages are stored.
+    "pwd" prints the working data tree/the current selected path.
+    "npm config set prefix newPath" sets the new address of where the global modules will be stored.
+
+--- 22. NPM cache and purging ---
+
+    Caching is a technique of storing some modules locally so that npm knows what packages and their versions are already installed.
+    "~/.npm" is where all cache content is stored.
+    Removing the npm can be useful for saving disk space and if the dev believes one of the caches is interrupting npm package installation.
+    "npm cache clean" or "npm cache clean --force" deletes the npm cache.

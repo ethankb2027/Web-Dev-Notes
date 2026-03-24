@@ -1,0 +1,379 @@
+
+NOTE: the tutorial that these notes come from utilize Java
+
+--- 1. What are data structures and algorithms? ---
+
+Data Structure - a named location that can be used to store and organize data
+Algorithm ------ a collection of steps to solve a problem
+
+--- 2. Stack Data Structures ---
+
+Stack - LIFO (last-in first-out) data structure. Stores objects into a sort of "vertical tower"
+    
+    Methods:
+        push() --- add to the top
+        pop() ---- remove from the top
+        peek() --- displays what's at the top of the stack
+        empty() -- sees if the stack is empty
+        search() - look for data in a stack
+    
+    These data structures can run out of memory.
+
+    Uses:
+        1. Undo/Redo features in text editors
+        2. Moving back/forward through browser history
+        3. Backtracking algorithms (maze, file directories)
+        4. Calling functions (call stack)
+
+--- 3. Queue Data Structures ---
+
+Queue - FIFO (first-in first-out) data structure. A collection designed for holding elements prior to processing. Linear data structure
+    
+    Methods:
+        offer() ---- enqueue, adding to the tail
+        poll() ----- dequeue, removing from the head
+        peek() ----- displays what's at the head of the queue
+        isEmpty() -- checks if the queue is empty or not
+        size() ----- displays the size of the queue
+        contains() - checks if a certain data exists in the queue
+
+    Uses:
+        1. Keyboard buffer (letters should appear on the screen in the order they're pressed)
+        2. Printer queue (print jobs should be completed in order)
+        3. Used in LinkedLists, PriorityQueues, Breadth-first search
+
+--- 4. Priority Queue Data Structures ---
+
+Priority Queue - a FIFO data structure that serves elements with the highest priorities first before elements with lower Priority
+    
+    Puts the data in ascending/alphabetical (default) or descending/reverse alphabetical (reverse) order.
+
+--- 5. Linked Lists ---
+
+Linked Lists - stores Nodes in two parts (data + address). Nodes are in non-consecutive memory locations. Elements are linked using pointers
+                       
+                       Singly Linked List                                        Doubly Linked List (more memory)
+          Node                Node                Node                         Node                           Node
+    [data | address] -> [data | address] -> [data | address]        [address | data | address] <-> [address | data | address]
+
+    Similar to arrays, but...
+        Pros - easier to insert and delete data than arrays
+        Cons - harder to locate data than arrays
+
+    Has the same methods as stacks and queues.
+        push()
+        pop()
+        offer()
+        poll()
+        peek()
+
+    Has some unique methods.
+        add() --------- adds data at a specific index
+        addFirst() ---- adds data at the start
+        addLast() ----- adds data at the end
+        remove() ------ removes data
+        removeFirst() - removes the starting data
+        removeLast() -- removes the ending data
+        peekFirst() --- displays the starting data
+        peekLast() ---- displays the ending data
+        indexOf() ----- finds the data at the index
+
+    Advantages:
+        1. Dynamic data structure (allocates needed memory while running)
+        2. Insertion and deletion of Nodes is easy. O(1)
+        3. No/Low memory waste
+
+    Disadvantages:
+        1. Greater memory usage (additional pointer)
+        2. No random access of elements (no index [i])
+        3. Accessing/Searching elements is more time consuming. O(n)
+
+    Uses:
+        1. Implement stacks/queues
+        2. GPS navigation
+        3. Music playlist
+
+--- 6. Dynamic Arrays ---
+
+Dynamic Array - a resizable, contiguous data structure that automatically grows or shrinks in size as elements are added or removed
+
+    Methods:
+        add()
+        insert()
+        delete()
+        search()
+        grow()
+        shrink()
+        isEmpty()
+        toString()
+        size()
+        capacity()
+
+
+    Advantages:
+        1. Random access of elements O(1)
+        2. Good loyalty of reference and data cache utilization
+        3. Easy to insert/delete at the end
+
+    Disadvantages:
+        1. Wastes more memory
+        2. Shifting elements is time consuming O(n)
+        3. Expanding/Shrinking the array is time consuming O(n)
+
+--- 7. Linked Lists vs Dynamic Arrays ---
+
+    Linked Lists are faster at...
+        removing/adding the first element
+
+    Dynamic Arrays are faster at...   
+        getting an element
+        removing/adding the middle element
+        adding/removing the last element
+
+--- 8. Big O Notation ---
+
+Big O Notation - describes the performance of an algorithm as the amount of data increases
+    
+    "How code slows as data grows."
+    Machine independent (# of steps to completion).
+    Ignore smaller operations O(n + 1) -> O(n).
+    n = amount of data (it's a variable like x).
+    Graph: https://www.youtube.com/watch?v=XMUe3zFhM5c&list=PLZPZq0r_RZON1eaqfafTnEexRzuHbfZX8&index=8
+
+    Different runtime complexities:
+        O(1) ------- constant time
+            random access of an element in an array
+            inserting at the beginning of linkedlist
+        O(log n) --- logarithmic time
+            binary search
+        O(n) ------- linear time
+            looping through elements in an array
+            searching through a linkedlist
+        O(n log n) - quasilinear time
+            quick sort
+            merge sort
+            heap sort
+        O(n^2) ----- quadratic time
+            insertion sort
+            selection sort
+            bubble sort
+        O(n!) ------ factorial time
+            Traveling Salesman Problem
+
+--- 9. Linear Search ---
+
+Linear Search - iterate through a collection one element at a time
+
+    Runtime complexity of O(n).
+
+    Advantages:
+        1. Fast for searches of small to medium data sets
+        2. Does not need to be sorted
+        3. Useful for data structures that do not have random access (Linked List)
+
+    Disadvantages:
+        1. Slow for large data sets
+
+--- 10. Binary Search ---
+
+Binary Search - a search algorithm that finds the position of a target value within a sorted array. Half of the array is eliminated during each "step"
+
+    Runtime complexity of O(log n).
+
+    Advantages:
+        1. Great for really large data sets
+    
+    Disadvantages:
+        1. The array needs to be sorted
+        2. A bit less efficient with smaller data sets
+
+--- 11. Interpolation Search ---
+
+Interpolation Search - improvement over binary search best used for "uniformly" distributed data. "Guesses" where a value might be based on calculated probe results.
+                       If probe is incorrect, search area is narrowed, and a new probe is calculated
+
+    Runtime complexity of O(log(log(n))) (average case) or O(n) (worst case, values increase exponentially).
+
+--- 12. Bubble Sort ---
+
+Bubble Sort - pairs of adjacent elements are compared, and the elements swap if they are not in order
+
+    Runtime complexity of O(n^2).
+
+    Advantages:
+        1. Very simple algorithm
+
+    Disadvantages:
+        1. Terrible for large data sets
+
+--- 13. Selection Sort ---
+
+Selection Sort - search through an array and keep track of the minimum value during each iteration. At the end of the iteration, we swap variables
+
+    Runtime complexity of O(n^2).
+
+    Advantages:
+        1. Very simple algorithm
+
+    Disadvantages:
+        1. Terrible for large data sets
+
+--- 14. Insertion Sort ---
+
+Insertion Sort - after comparing elements to the left. Shift elements to the right to make room to insert a value
+
+    Runtime complexity of O(n^2).
+
+    Advantages:
+        1. Less steps than Bubble Sort
+        2. Best case is O(n) compared to Selection Sort O(n^2)
+
+    Disadvantages:
+        1. Terrible for large data sets
+
+--- 15. Recursion ---
+
+Recursion - apply the result of a procedure to a procedure
+
+    A recursive method calls itself. Can be a substitute for iteration.
+    Divide a problem into sub-problems of the same type as the original.
+    Commonly used with advanced sorting algorithms and navigating trees.
+
+    Call Stack - a stack data structure that stores information about the active subroutines of a computer program. This kind of stack is also known as
+                 an execution stack, program stack, control stack, run-time stack, or machine-stack, and is often shortened to just "the stack"
+
+                    Iteration                       vs                      Recursion
+    Implementation - uses loops                         Implementation - calls itself
+    State ---------- control index, (int steps = 0)     State ---------- parameter values, walk(int steps)
+    Progression ---- moves toward value in condition    Progression ---- converge towards base case        
+    Termination ---- index satisfies condition          Termination ---- base case = true
+    Size ----------- more code, less memory             Size ----------- less code, more memory
+    Speed ---------- faster                             Speed ---------- slower
+
+
+    Advantages:
+        1. Easier to read/write
+        2. Easier to debug
+
+    Disadvantages:
+        1. Sometimes slower
+        2. Uses more memory
+
+--- 16. Merge Sort ---
+
+Merge Sort - recursively divide array in two, sort, re-combine
+
+    Runtime complexity of O(n log n).
+
+    Space complexity of O(n), which is greater than Bubble, Selection, and Insertion Sort which have a space complexity of O(1).
+
+    Advantages:
+        1. Faster than Bubble, Selection, and Insertion Sort
+
+    Disadvantages:
+        1. Takes up more space than Bubble, Selection, and Insertion Sort
+
+--- 17. Quick Sort ---
+
+Quick Sort - moves smaller elements to the left of a pivot. Recursively divides array in two partitions.
+             The pivot is typically at the end of the array, but can be located at the beginning or middle
+
+    Runtime complexity of O(n log n) (best and average case) or O(n^2) (worst case if already sorted).
+
+    Space complexity of O(log n) due to recursion.
+
+    Advantages:
+        1. Faster than Bubble, Selection, and Insertion Sort
+
+    Disadvantages:
+        1. Takes up more space than Bubble, Selection, and Insertion Sort
+
+--- 18. Hash Tables ---
+
+Hash Table - a data structure that stores unique keys to values (ex. <int, str>). Each key/value pair is known as an Entry.
+             FAST insertion, look up, deletion of key/value pairs. Not ideal for small data sets, great with large data sets
+
+    Hashing --- takes a key and computes an integer (formula will vary based on key & data type). In a Hash Table, we use the hash %
+              capacity to calculate an index number ( key.hashCode() % capacity = index )
+    Bucket ---- an indexed storage location for one or more Entries. Can store multiple Entries in case of a collision (linked similarly to a Linked List)
+    Collision - hash function generates the same index for more than one key. Less Collisions = More Efficiency
+
+    Runtime complexity of O(1) (best case) or O(n) (worst case).
+
+--- 19-21. Graphs ---
+
+Graph - a nonlinear aggregation of nodes and edges. Can be used to model a network
+
+    Node ------ also known as a vertex, may contain some piece of data
+    Edge ------ a connection between two nodes
+    Adjacency - when two nodes are connected via edge
+
+    Undirected Graph - edges are two way
+    Directed Graph --- edges are one way
+
+    Two popular ways to represent a graph:
+        Adjacency Matrix - a 2D array with the nodes at the top and side populated with 1s or 0s, depending if there's adjacency
+            Time complexity:  O(1)
+            Space complexity: O(V^2)
+        Adjacency List --- array of linked lists with each element having a node with their adjacencies
+            Time complexity:  O(V)
+            Space complexity: O(V + E)
+
+--- 22. Depth First Search ---
+
+Depth First Search (DFS) - a search algorithm for traversing a tree or graph data structure (utilizes a stack)
+
+    Procedure:
+        1. Pick a route
+        2. Keep going until you reach a dead end, or a previously visited node
+        3. Backtrack to last node that has unvisited adjacent neighbors
+
+    Better if destination is on average far from the start.
+    Children are visited before siblings.
+    More popular for games/puzzles.
+
+--- 23. Breadth First Search ---
+
+Breadth First Search (BFS) - a search algorithm for traversing a tree or graph data structure (utilizes a queue)
+
+    Procedure:
+        When compared to DFS, BFS is done one "level" at a time rather than one "branch" at a time.
+
+    Better if destination is on average close to start.
+    Siblings are visited before children.
+
+--- 24. Tree Data Structures ---
+
+Tree - a non-linear data structure where nodes are organized in a hierarchy (ex. file explorer, databases, DNS, HTML DOM)
+
+    Root Node --- top of the tree with only outgoing edges
+    Leaf Node --- bottom of the tree with only incoming edges
+    Branch Node - middle of the tree with outgoing and incoming edges
+    Parent ------ any node with outgoing edges
+    Child ------- any node with incoming edges
+    Siblings ---- nodes that share a parent node
+    Subtree ----- a smaller tree held within a larger tree
+    Size -------- number of nodes
+    Depth ------- number of edges below the root node
+    Height ------ number of edges above the furthest leaf node
+
+--- 25. Binary Search Trees ---
+
+Binary Tree -------- a tree data structure comprised of nodes with no more than two children nodes
+Binary Search Tree - similar to the binary tree structure, but parent nodes are greater than the left child node and less than the right child node
+    Benefit:          easy to locate a node when they are in this order
+    Time complexity:  O(log n) (best case) or O(n) (worst case)
+    Space complexity: O(n)
+
+--- 26. Tree Traversal ---
+
+Tree Traversal - the process of visiting all nodes of a tree
+
+Types of tree traversal methods:
+    In-order --- left -> root -> right
+    Post-order - left -> right -> root (from leaf to root)
+    Pre-order -- root -> left -> right (common for copying trees)
+
+--- 27. Execution Time ---
+
+Java - System.nanoTime()

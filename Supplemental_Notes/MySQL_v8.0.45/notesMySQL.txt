@@ -1,0 +1,336 @@
+
+--- 1. INTRODUCTION ---
+
+    Utilize the MySQL Workbench to work on SQLs.
+    MySQL language is not case-sensitive.
+    There are two types of databases:
+        Relational ----- SQL, tables with rows and columns
+        Non-relational - NoSQL, anything other than tables
+    The structure of SQL is like the following: the database is the folder, and the tables are the files inside the folder
+
+--- 2. DATABASES ---
+
+    MySQL Statements:
+        CREATE DATABASE databaseName; --------------- creates a database
+        USE databaseName; --------------------------- accesses a database
+        DROP DATABASE databaseName; ----------------- deletes a database
+        ALTER DATABASE databaseName READ ONLY = 0/1 - whether or not the database is editable
+
+--- 3. TABLES ---
+
+    MySQL Statements:
+        CREATE TABLE tableName ( - creates a table in the current database
+            column1,
+            column2,
+            ...
+        );
+        SELECT * FROM tableName; ------------------- selects a table
+        RENAME TABLE oldTableName TO newTableName; - renames a table
+        DROP TABLE tableName; ---------------------- deletes a table
+        ALTER TABLE tableName... 
+            ADD columnName dataType; ----------------------- adds a column to a table
+            RENAME COLUMN oldColumnName TO newColumnName; -- renames a column in a table
+            MODIFY COLUMN columnName newDataType; ---------- changes the datatype of a column
+            MODIFY columnName1 dataType AFTER columnName2; - moves a column to the right of another column
+            MODIFY columnName1 dataType FIRST; ------------- moves a column to the farthest left position
+            DROP COLUMN columnName; ------------------------ deletes a column in a table
+
+    Data Types:
+        INT ------------------------------ integer
+        VARCHAR(maxCharacters) ----------- string with a set max number of characters
+        DECIMAL(maxDigits, maxPrecision) - non-integer with a set max number of digits and decimal places
+        DATA ----------------------------- a day
+        TIME ----------------------------- a time
+        DATETIME ------------------------- a day and time
+
+--- 4. INSERT ROWS ---
+
+    MySQL Statements:
+        INSERT INTO tableName VALUES (column1Data1, column2Data1, ...), ------------------------- creates rows of data in a table (all columns must be filled)
+                                     (column1Data2, column2Data2, ...), ...; 
+        INSERT INTO tableName (column1, column2, ...) VALUES (column1Data1, column2Data1, ...), - creates rows of data in a table (select columns must be filled)
+                                                             (column1Data2, column2Data2, ...), ...;
+
+--- 5. SELECT ---
+
+    MySQL Statements:
+        SELECT...
+            * FROM tableName; --------------------- selects all data from a table
+            column1, column2, ... FROM tableName; - selects specific columns from a table
+            anyColumn FROM tableName WHERE column... 
+                comparisonOperator value; - selects rows that meet the column value
+                IS NULL; ------------------ selects rows that have a null value in a column
+                IS NOT NULL; -------------- selects rows that don't have a null value in a column
+
+    Comparison Operators:
+        = -- equal to
+        != - not equal to
+        < -- less than
+        <= - less than or equal to
+        > -- greater than
+        >= - greater than or equal to
+
+--- 6. UPDATE & DELETE ---
+
+    MySQL Statements:
+        UPDATE table SET column1 = value, column2 = value, ...; ----------------------- changes the selected columns' values of all rows
+        UPDATE table SET column1 = value, column2 = value, ... WHERE column3 = value; - changes the values of selected columns in a row
+        DELETE FROM table; ------------------------------------------------------------ deletes all rows in a table
+        DELETE FROM table WHERE column = value; --------------------------------------- deletes a row in a table
+
+--- 7. AUTOCOMMIT, COMMIT, ROLLBACK ---
+
+    MySQL Statements:
+        SET AUTOCOMMIT = OFF/ON; - sets whether autosave is on or not for a database (on by default)
+        COMMIT; ------------------ saves changes to the database
+        ROLLBACK; ---------------- loads the last save point/commit
+
+--- 8. CURRENT_DATE() & CURRENT_TIME() ---
+
+    MySQL Statements:
+        INSERT INTO table VALUES... 
+            (CURRENT_DATE()) - inserts the current day
+            (CURRENT_TIME()) - inserts the current time
+            (NOW()) ---------- inserts the current day and time
+
+--- 9. UNIQUE ---
+
+    MySQL Statements:
+        CREATE TABLE table (column dataType UNIQUE); ------ makes a column where every row in that column must have different values
+        ALTER TABLE table ADD CONSTRAINT UNIQUE (column); - alters a column where every row in that column must have different values
+
+--- 10. NOT NULL ---
+
+    MySQL Statements:
+        CREATE TABLE table (column dataType NOT NULL); ----- makes a column where every row in that column must have a value
+        ALTER TABLE table MODIFY column dataType NOT NULL; - alters a column where every row in that column must have a value
+
+--- 11. CHECK ---
+
+    MySQL Statements:
+        CREATE TABLE table ( -------------------------------------------------------------------- creates a table with a constraint where a column must meet a specification
+            column1 dataType1, 
+            column2 dataType2, 
+            ...,
+            CONSTRAINT constraintName CHECK (column comparisonOperator value)
+        );
+        ALTER TABLE table ADD CONSTRAINT constraintName CHECK (column comparisonOperator value); - adds a constraint to a table where a column must meet a specification
+        ALTER TABLE table DROP CHECK constraintName ---------------------------------------------- deletes the check constraint from a table
+
+--- 12. DEFAULT ---
+
+    MySQL Statements:
+        CREATE TABLE table (column dataType DEFAULT defaultValue); - creates a table with a column that has a certain value if nothing is assigned in that column
+        ALTER TABLE table ALTER column SET DEFAULT defaultValue; - alters a column where a certain value is assigned if nothing was assigned to that column
+
+--- 13. PRIMARY KEYS ---
+
+    MySQL Statements:
+        CREATE TABLE table (column datatype PRIMARY KEY); - creates a table with a column that must be unique and not null. Only one column can have this constraint
+        ALTER TABLE table ADD CONSTRAINT PRIMARY KEY (column); - alters a column in a table so that it must be unique and not null. Only one column can have this constraint
+
+--- 14. AUTO_INCREMENT ---
+
+    MySQL Statements:
+        CREATE TABLE table (column dataType PRIMARY KEY AUTO_INCREMENT); - creates a table with a column that automatically increases by one for every additional row 
+                                                                           (first row will have a default primary key of 1). Only the primary key column can have 
+                                                                           this constraint
+        ALTER TABLE table AUTO_INCREMENT = integer; ---------------------- changes a table's primary key column so that it starts at a specified value from when it increments
+
+--- 15. FOREIGN KEYS ---
+
+    Foreign Key -------------- permits cross-referencing related data across tables
+    Foreign Key Constraint --- helps keep the related data consistent by not allowing the parent row to be modified
+    Foreign Key Relationship - involves a parent table that holds the initial column values, and a child table with column values that reference the parent column values.
+                               A foreign key constraint is defined on the child table
+
+    MySQL Statements:
+        CREATE TABLE table ( --------------------------------------------------------------------------------------------- creates a table that has a Foreign Key
+            column1 dataType1 PRIMARY KEY AUTO_INCREMENT,                                                                  Relationship with another table
+            parentColumn dataType2,
+            ...
+            FOREIGN KEY (parentColumn) REFERENCES parentTable (parentColumn)
+        );
+        ALTER TABLE table ADD CONSTRAINT foreignKeyName FOREIGN KEY (parentColumn) REFERENCES parentTable (parentColumn) - adds a Foreign Key Relationship to a table
+            NOTE: "ADD CONSTRAINT foreignKeyName" is optional
+        ALTER TABLE table DROP FOREIGN KEY foreignKeyName ---------------------------------------------------------------- deletes a Foreign Key Relationship of a table
+
+--- 16. JOINS ---
+
+    Inner Join - join together any matching rows based on some link
+    Left Join -- join together any matching rows based on some link and display all rows from the left table
+    Right Join - join together any matching rows based on some link and display all rows from the right table
+
+    MySQL Statements:
+        SELECT anyColumn FROM table1... 
+            INNER JOIN table2 ON table1FK = table2PK; - displays columns based on inner join
+            LEFT JOIN table2 ON table1FK = table2PK; -- displays columns based on left join
+            RIGHT JOIN table2 ON table1FK = table2PK; - displays columns based on right join
+
+--- 17. FUNCTIONS ---
+
+    Function - a stored program that you can pass parameters into to return a value
+
+    MySQL Statements:
+        SELECT... 
+            COUNT (column) AS optionalName FROM table; - returns the number of rows in that column with an optional name
+            MAX (column) FROM table; ------------------- returns the maximum value in that column
+            MIN (column) FROM table; ------------------- returns the minimum value in that column
+            AVG (column) FROM table; ------------------- returns the average value in that column
+            SUM (column) FROM table; ------------------- returns the total value in that column
+            CONCAT (column1, column2, ...) FROM table; - returns the concatenation of the column values
+
+--- 18. AND, OR, NOT ---
+
+    Logical Operator - key words that combine more than one condition. Logical operators can be stacked
+
+    MySQL Statements:
+        SELECT anyColumn FROM table WHERE 
+            condition1 AND condition2; -------- displays columns of rows that meet both conditions
+            condition1 OR condition2; --------- displays columns of rows that meet either condition
+            NOT condition; -------------------- displays columns of rows that don't meet the condition
+            column BETWEEN value1 AND value2; - displays columns of rows when a column value falls within two specified values
+            column IN (value1, value2, ...); -- displays columns of rows when a column value matches any of the specified values
+
+--- 19. WILD CARDS ---
+
+    Wild Card Characters: "%" "_". Used to substitute one or more characters in a string. Both characters can be combined
+        % - any length of random characters
+        _ - one random character
+
+    MySQL Statements:
+        SELECT anyColumn FROM table WHERE column LIKE 
+            "value%"; - displays columns of rows where a column starts with a value
+            "%value"; - displays columns of rows where a column ends with a value
+            "v_l_e_"; - displays columns of rows where a column meets the provided frame
+
+--- 20. ORDER BY ---
+
+    Order By - clause that sorts the results of a query in ascending (default) or descending order
+
+    MySQL Statements:
+        SELECT anyColumn FROM table ORDER BY column ASC; ------------ orders results with the column in ascending order
+            ASC is optional, it's the default
+        SELECT anyColumn FROM table ORDER BY column DESC; ----------- orders results with the column in descending order
+        SELECT anyColumn FROM table ORDER BY column1, column2, ...; - orders results with multiple columns in order with the higher priority columns on the left
+
+--- 21. LIMIT ---
+
+    Limit - clause used to limit the number of records. Useful if you're working with a lot of data. Can be used to display large data on pages (pagination)
+
+    MySQL Statements:
+        SELECT * FROM table LIMIT integer; -------------- displays a number of rows from a table
+        SELECT * FROM table LIMIT offsetInt, recordInt; - displays a number of rows from a table starting from an offset
+
+--- 22. UNIONS ---
+
+    Union - operator that combines the results of two or more SELECT statements
+
+    MySQL Statements:
+        SELECT anyColumn FROM table1 UNION SELECT anyColumn FROM table2 UNION ...; ----- displays multiple tables without duplicates (must have the same number of columns)
+        SELECT anyColumn FROM table1 UNION ALL SELECT anyColumn FROM table2 UNION ...; - displays multiple tables with duplicates (must have the same number of columns)
+
+--- 23. SELF JOINS ---
+
+    Self Join - joins another copy of a table to itself. Used to compare rows of the same table. Helps to display a hierarchy of data
+
+    MySQL Statements:
+        SELECT anyColumn FROM table AS alias1 anyJoin table AS alias2 ON alias1.ID1 = alias2.ID2; - self joins a table based on a column
+
+--- 24. VIEWS ---
+
+    View - a virtual table based on the result set by an SQL statement. The fields in a view are fields from one or more real tables in the database. 
+           They're not real tables, but can be interacted with as if they were. Always displays the most up-to-date changes from the original tables
+
+    MySQL Statements:
+        CREATE VIEW viewTable AS SELECT anyColumn FROM table; - creates a view table from an existing table
+        DROP VIEW viewTable; ---------------------------------- deletes a view table
+
+--- 25. INDEXES ---
+
+    Index:
+        - Has a B-tree Data Structure
+        - Used to find values within a specific column more quickly
+        - MySQL normally searches sequentially through a column
+        - The longer the column, the more expensive the operation is
+        - UPDATE takes more time, SELECT takes less time
+
+    MySQL Statements:
+        SHOW INDEXES FROM table; --------------------------------- displays all existing indexes of a table
+        CREATE INDEX indexName ON table (column); ---------------- creates an index for a column in an existing table
+        CREATE INDEX indexName ON table (column1, column2, ...); - creates an index for multiple columns (order is important) in an existing table
+
+--- 26. SUBQUERIES ---
+
+    Subquery - a query within another query, query(subquery)
+
+    Subquery Examples:
+        SELECT first_name, last_name, hourly_pay, (SELECT AVG (hourly_pay) FROM employees) AS avg_pay FROM employees;
+        SELECT first_name, last_name, hourly_pay FROM employees WHERE hourly_pay > (SELECT AVG (hourly_pay) FROM employees);
+
+    Distinct - clause that returns results with no duplicates
+
+--- 27. GROUP BY ---
+
+    Group By - clause that aggregates all rows by a specific column. Often used with aggregate functions (ex. SUM(), MAX(), MIN(), AVG(), COUNT())
+
+    MySQL Statements:
+        SELECT anyAggFxn (column1), column2 FROM table GROUP BY column2; ------------------ displays rows that are grouped by a column
+        SELECT anyAggFxn (column1), column2 FROM table GROUP BY column2 HAVING condition; - displays rows in groups that meet a condition
+
+--- 28. ROLLUP ---
+
+    Rollup - an extension of the GROUP BY clause that produces another row and shows the GRAND TOTAL (super-aggregate value)
+
+    MySQL Statements:
+        SELECT anyAggFxn (column1), column2 FROM table GROUP BY column2 WITH ROLLUP; - on top of the effects of GROUP BY, a grand total row is added to the bottom
+
+--- 29. ON DELETE ---
+
+    MySQL Statements:
+        ON DELETE SET NULL ------------ when a foreign key is deleted, replace fk with NULL (declared after the fk relationship creation statement)
+        ON DELETE CASCADE ------------- when a foreign key is deleted, delete row (declared after the fk relationship creation statement)
+        SET foreign_key_checks = 0/1; - whether or not the foreign key constraint is enforced
+
+
+--- 30. STORED PROCEDURES ---
+
+    Stored Procedure - prepared SQL code that you can save. Great if there's a query that you write often
+        - Reduces network traffic
+        - Increases performance
+        - Secure, admin can grant permission to use
+        - Increases memory usage of every connection
+    Delimiter -------- what MySQL reads as the end of a statement (default is ";")
+
+    Stored Procedure Example:
+        DELIMITER $$ --------------------------------------------------------------------- creates a stored procedure
+        CREATE PROCEDURE procedureName()
+        BEGIN
+            anyQuery;
+        END$$
+        DELIMITER ;
+
+        CALL procedureName(); ------------------------------------------------------------ invokes a stored procedure
+
+        DELIMITER $$ --------------------------------------------------------------------- creates a stored procedure with parameters
+        CREATE PROCEDURE procedureName(IN anyName1 dataType1, IN anyName2 dataType2, ...)
+        BEGIN
+            anyQuery;
+        END$$
+        DELIMITER ;
+
+        CALL procedureName(value1, value2, ...); ----------------------------------------- invokes a stored procedure with arguments
+        
+        DROP PROCEDURE procedureName; ---------------------------------------------------- deletes a stored procedure
+
+--- 31. TRIGGERS ---
+
+    Trigger - when an event happens (ex. INSERT, UPDATE, DELETE), do something, like check data, handle errors, or audit tables
+
+    Trigger Examples:
+        SHOW TRIGGERS;
+        CREATE TRIGGER before_hourly_pay_update BEFORE UPDATE ON employees FOR EACH ROW SET NEW.salary = (NEW.hourly_pay * 2080);
+        CREATE TRIGGER before_hourly_pay_insert BEFORE INSERT ON employees FOR EACH ROW SET NEW.salary = (NEW.hourly_pay * 2080);
+        CREATE TRIGGER after_salary_delete AFTER DELETE ON employees FOR EACH ROW UPDATE expenses SET expense_total = expense_total - OLD.salary WHERE expense_name = "salaries";
+        CREATE TRIGGER after_salary_insert AFTER INSERT ON employees FOR EACH ROW UPDATE expenses SET expense_total = expense_total + NEW.salary WHERE expense_name = "salaries";
+        CREATE TRIGGER after_salary_update AFTER UPDATE ON employees FOR EACH ROW UPDATE expenses SET expense_total = expense_total + (NEW.salary - OLD.salary) WHERE expense_name = "salaries";

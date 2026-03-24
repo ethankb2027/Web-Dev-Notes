@@ -1,0 +1,87 @@
+
+"THE Joyless JavaScript" Tech Stack (as of 21 Mar 2026):
+    
+    Next.js ------------------------------------ full stack package (React framework)
+    
+        React ---------------------------------- frontend package (JS library)
+
+            HyperText Markup Language (HTML) --- frontend layout (markup language)
+
+            Tailwind CSS ----------------------- frontend efficient styling (CSS framework)
+
+                Cascading Style Sheets (CSS) --- frontend styling (style sheet language)
+
+            JavaScript (JS) -------------------- frontend functionality (programming language)
+
+        Node.js -------------------------------- backend package (JS runtime environment)
+
+            PostgreSQL ------------------------- backend database management system (object-relational database management system)
+
+            Prisma ----------------------------- backend database management system translator (Node.js library)
+
+        TypeScript (TS) ------------------------ more resilient JS (statically typed superset of JS | ACTION: convert all JS to TS)
+
+--------- INCOMPLETE ---------
+
+    Additional APIs/Services
+
+        NextAuth.js --- authentication library for Next.js
+
+    DevOps
+
+        Deployment
+
+            Vercel - Next.js deployment
+
+            Supabase - database hosting
+
+        Monit?
+        GitHub Actions?
+        Ansible?
+        Terraform?
+_____________________________________________________________________________________________________________________________________________________________________________________
+
+Tech Stack Tutorials:
+
+    Next.js ---------------------------- https://www.youtube.com/watch?v=843nec-IvW0&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=10
+
+        React -------------------------- https://www.youtube.com/watch?v=RVFAyFWO4go&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=4
+ 
+            HyperText Markup Language -- https://www.youtube.com/watch?v=mJgBOIoGihA&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=1
+
+            Tailwind CSS --------------- https://www.youtube.com/watch?v=lCxcTsOHrjo&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=8
+
+                Cascading Style Sheets - https://www.youtube.com/watch?v=n4R2E7O-Ngo&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=2
+
+            JavaScript ----------------- https://www.youtube.com/watch?v=EfAl9bwzVZk&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=3
+
+        Node.js ------------------------ https://www.youtube.com/watch?v=f2EqECiTBL8&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=5
+
+            PostgreSQL ----------------- https://www.youtube.com/watch?v=qw--VYLpxG4
+
+            Prisma --------------------- https://www.youtube.com/watch?v=gimSKEsWYb4
+
+        TypeScript --------------------- https://www.youtube.com/watch?v=gieEQFIfgYc&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=9
+
+Supplemental Tutorials:
+    Data Structures & Algorithms - https://www.youtube.com/watch?v=CBYHwZcbD-s
+    Git & GitHub ----------------- https://www.youtube.com/watch?v=rH3zE7VlIMs
+    MongoDB ---------------------- https://www.youtube.com/watch?v=c2M-rlkkT5o&list=PLZPZq0r_RZOPP5Yjt6IqgytMRY5uLt4y3&index=4
+    MySQL ------------------------ https://www.youtube.com/watch?v=5OdVJbNCSso&list=PLZPZq0r_RZOPP5Yjt6IqgytMRY5uLt4y3&index=5
+    npm -------------------------- https://www.youtube.com/watch?v=cjoTTSbOuG0
+    PHP -------------------------- https://www.youtube.com/watch?v=zZ6vybT1HQs&list=PLZPZq0r_RZOPP5Yjt6IqgytMRY5uLt4y3&index=6
+    RESTful APIs ----------------- https://www.youtube.com/playlist?list=PLWPirh4EWFpGRdVZcQCzeTXFBNSTDAdQX
+    JWT Auth --------------------- https://www.youtube.com/playlist?list=PL4cUxeGkcC9iqqESP8335DA5cRFp8loyp
+_____________________________________________________________________________________________________________________________________________________________________________________
+
+Learning Roadmap:
+    1. 
+    2.  Git & GitHub
+    3.  Tailwind CSS
+    4.  PostgreSQL
+    5.  RESTful APIs
+    6.  JWT Auth
+    7.  Prisma
+    8.  TypeScript
+    9.  Next.js
+    10. Checkpoints/Projects...
