@@ -1,4 +1,37 @@
 
+Topics Covered:
+    1. INTRODUCTION
+    2. DATABASES
+    3. TABLES
+    4. INSERT ROWS
+    5. SELECT
+    6. UPDATE & DELETE
+    7. AUTOCOMMIT, COMMIT, ROLLBACK
+    8. CURRENT_DATE() & CURRENT_TIME()
+    9. UNIQUE
+    10. NOT NULL
+    11. CHECK
+    12. DEFAULT
+    13. PRIMARY KEYS
+    14. AUTO_INCREMENT
+    15. FOREIGN KEYS
+    16. JOINS
+    17. FUNCTIONS
+    18. AND, OR, NOT
+    19. WILD CARDS
+    20. ORDER BY
+    21. LIMIT
+    22. UNIONS
+    23. SELF JOINS
+    24. VIEWS
+    25. INDEXES
+    26. SUBQUERIES
+    27. GROUP BY
+    28. ROLLUP
+    29. ON DELETE
+    30. STORED PROCEDURES
+    31. TRIGGERS
+
 --- 1. INTRODUCTION ---
 
     Utilize the MySQL Workbench to work on SQLs.
@@ -291,7 +324,6 @@
         ON DELETE SET NULL ------------ when a foreign key is deleted, replace fk with NULL (declared after the fk relationship creation statement)
         ON DELETE CASCADE ------------- when a foreign key is deleted, delete row (declared after the fk relationship creation statement)
         SET foreign_key_checks = 0/1; - whether or not the foreign key constraint is enforced
-
 
 --- 30. STORED PROCEDURES ---
 

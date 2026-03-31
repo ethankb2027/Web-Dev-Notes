@@ -1,4 +1,28 @@
 
+Topics Covered:
+    1. What is NPM? How is it related to Node?
+    2. NPM vs Yarn
+    3. Installing NPM and Node on your system
+    4. Why Node versioning is required?
+    5. Managing multiple Node versions using `n`
+    6. What is an NPM module?
+    7. How does NPM install module?
+    8. package.json file
+    9. Exploring package.json
+    10. Installing module
+    11. Removing module
+    12. Local v/s global modules
+    13. Semantic Versioning
+    14. All about package-lock.json
+    15. Semantic versioning in package.json
+    16. dependencies
+    17. devDependencies
+    18. peerDependencies
+    19. What are NPM scripts
+    20. All about NPX
+    21. Changing global packages installation location
+    22. NPM cache and purging
+
 --- 1. What is NPM? How is it related to Node? ---
 
     npm used to be independent until it was bought by GitHub, which is owned by Microsoft.

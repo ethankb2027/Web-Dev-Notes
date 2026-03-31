@@ -1,128 +1,142 @@
 
+Topics Covered:
+    1. VS Code w/ MongoSH
+    2. Databases
+    3. Insert
+    4. Data Types
+    5. Sorting and Limiting
+    6. Find
+    7. Update
+    8. Delete
+    9. Comparison Operators
+    10. Logical Operators
+    11. Indexes
+    12. Collections
+
 --- General Notes ---
 
-MongoDB is a NoSQL database, meaning they utilize documents instead of tables.
-The hierarchy from the top-down is the following: Database -> Collection -> Document.
+    MongoDB is a NoSQL database, meaning they utilize documents instead of tables.
+    The hierarchy from the top-down is the following: Database -> Collection -> Document.
 
 --- 1. VS Code w/ MongoSH ---
 
-Shell Commands:
-    cls ----- clear screen
-    mongosh - establish connection with MongoSH
-    exit ---- exit any application
+    Shell Commands:
+        cls ----- clear screen
+        mongosh - establish connection with MongoSH
+        exit ---- exit any application
 
 --- 2. Databases ---
 
-Shell Commands:
-    use databaseName ------------------------ access a database or create a database if it doesn't exist
-    show dbs -------------------------------- displays all databases
-    db.createCollection( "collectionName" ) - create a collection in the current database
-    db.dropDatabase() ----------------------- deletes the current database
+    Shell Commands:
+        use databaseName ------------------------ access a database or create a database if it doesn't exist
+        show dbs -------------------------------- displays all databases
+        db.createCollection( "collectionName" ) - create a collection in the current database
+        db.dropDatabase() ----------------------- deletes the current database
 
 --- 3. Insert ---
 
-Shell Commands:
-    db.collectionName.insertOne( { key1:value1, key2:value2, ... } ) ---------------- creates one document of key value pairs in the selected collection
-    db.collectionName.insertMany( [ { key1_1: value1_1, key1_2: value1_2, ... }, 
-                                    { key2_1: value2_1, key2_2: value2_2, ... } ] ) - creates multiple documents of key value pairs in the selected collection
-    db.collectionName.find() -------------------------------------------------------- displays all documents in a collection
+    Shell Commands:
+        db.collectionName.insertOne( { key1:value1, key2:value2, ... } ) ---------------- creates one document of key value pairs in the selected collection
+        db.collectionName.insertMany( [ { key1_1: value1_1, key1_2: value1_2, ... }, 
+                                        { key2_1: value2_1, key2_2: value2_2, ... } ] ) - creates multiple documents of key value pairs in the selected collection
+        db.collectionName.find() -------------------------------------------------------- displays all documents in a collection
 
 --- 4. Data Types ---
 
-List of data types:
-    string ---------- text ( "sample123" )
-    integer --------- whole numbers ( 123 )
-    double ---------- numbers with decimals ( 123.123 )
-    boolean --------- ( true ) or ( false )
-    date object ----- day and time
-        ( new Date() ) ------------------------ current day and time in UTC
-        ( new Date( "2026-03-06T10:12:05" ) ) - custom day and time in UTC
-    null ------------ no value, acts as a placeholder ( null )
-    field ----------- collection of values ( [ sample1, sample2, ... ] )
-    nested document - another document ( { key1: value1, key2: value2, ... } )
+    List of data types:
+        string ---------- text ( "sample123" )
+        integer --------- whole numbers ( 123 )
+        double ---------- numbers with decimals ( 123.123 )
+        boolean --------- ( true ) or ( false )
+        date object ----- day and time
+            ( new Date() ) ------------------------ current day and time in UTC
+            ( new Date( "2026-03-06T10:12:05" ) ) - custom day and time in UTC
+        null ------------ no value, acts as a placeholder ( null )
+        field ----------- collection of values ( [ sample1, sample2, ... ] )
+        nested document - another document ( { key1: value1, key2: value2, ... } )
 
 --- 5. Sorting and Limiting ---
 
-.find, .sort, .limit can be method chained.
+    .find, .sort, .limit can be method chained.
 
-Shell Commands:
-    db.collectionName.find().sort( parameter ) -- displays an organized version of the collection based on the parameter given
-        .sort( { key: 1 } ) -- alphabetical or increasing numeric order
-        .sort( { key: -1 } ) - reverse alphabetical or decreasing numeric order
-    db.collectionName.find().limit( parameter ) - displays the first (parameter integer) documents in the collection
+    Shell Commands:
+        db.collectionName.find().sort( parameter ) -- displays an organized version of the collection based on the parameter given
+            .sort( { key: 1 } ) -- alphabetical or increasing numeric order
+            .sort( { key: -1 } ) - reverse alphabetical or decreasing numeric order
+        db.collectionName.find().limit( parameter ) - displays the first (parameter integer) documents in the collection
 
 --- 6. Find ---
 
-Shell Commands:
-    db.collectionName.find( { query }, { projection } ) - displays certain key value pairs based on projection of documents that meet the query
-        .find( { key1: value1, key2: value2, ... }, {key1: true, key2: false, ... } )
+    Shell Commands:
+        db.collectionName.find( { query }, { projection } ) - displays certain key value pairs based on projection of documents that meet the query
+            .find( { key1: value1, key2: value2, ... }, {key1: true, key2: false, ... } )
 
 --- 7. Update ---
 
-Shell Commands:
-    db.collectionName.updateOne( { filter }, { update } ) ------------------ updates one field of one document that meets the filter. 
-                                                                             If the updated field doesn't exist, then it's created
-        .updateOne( { key: value }, { $set: { key: newValue } } ) -- updates/adds a field
-        .updateOne( { key: value }, { $unset: { key: "" } } ) ------ removes a field
-    db.collectionName.updateMany( { filter }, { update } ) ----------------- updates one field of many documents that meet the filter. 
-                                                                             If the updated field doesn't exist, then it's created
-        .updateMany( { key: value }, { $set: { key: newValue } } ) - updates/adds a field
-        .updateMany( { key: value }, { $unset: { key: "" } } ) ----- removes a field
-    .updateOne OR .updateMany( { key: { $exists: boolean } }, { update } ) - updates a field if a certain field exists or not
+    Shell Commands:
+        db.collectionName.updateOne( { filter }, { update } ) ------------------ updates one field of one document that meets the filter. 
+                                                                                If the updated field doesn't exist, then it's created
+            .updateOne( { key: value }, { $set: { key: newValue } } ) -- updates/adds a field
+            .updateOne( { key: value }, { $unset: { key: "" } } ) ------ removes a field
+        db.collectionName.updateMany( { filter }, { update } ) ----------------- updates one field of many documents that meet the filter. 
+                                                                                If the updated field doesn't exist, then it's created
+            .updateMany( { key: value }, { $set: { key: newValue } } ) - updates/adds a field
+            .updateMany( { key: value }, { $unset: { key: "" } } ) ----- removes a field
+        .updateOne OR .updateMany( { key: { $exists: boolean } }, { update } ) - updates a field if a certain field exists or not
 
 --- 8. Delete ---
 
-Shell Commands:
-    db.collectionName.deleteOne( { key: value } ) -- deletes one document that matches the field parameter
-    db.collectionName.deleteMany( { key: value } ) - deletes many documents that match the field parameter
+    Shell Commands:
+        db.collectionName.deleteOne( { key: value } ) -- deletes one document that matches the field parameter
+        db.collectionName.deleteMany( { key: value } ) - deletes many documents that match the field parameter
 
 --- 9. Comparison Operators ---
 
-Comparison operators return data based on value comparisons.
-Can be used in find, update, and delete methods.
-Must enclose in {} to be used.
-Can use multiple comparison operators ( { $1: value1, $2: value2, ... } ).
+    Comparison operators return data based on value comparisons.
+    Can be used in find, update, and delete methods.
+    Must enclose in {} to be used.
+    Can use multiple comparison operators ( { $1: value1, $2: value2, ... } ).
 
-Shell Commands:
-    $ne -- not equal to ( { $ne: value } )
-    $lt -- less than ( { $lt: number } )
-    $lte - less than or equal to ( { $lte: number } )
-    $gt -- greater than ( { $gt: number } )
-    $gte - greater than or equal to ( { $gte: number } )
-    $in -- equal to any value in the array ( { $in: [ value1, value2, ... ] } )
-    $nin - not equal to any value in the array ( { $nin: [ value1, value2, ... ] } )
+    Shell Commands:
+        $ne -- not equal to ( { $ne: value } )
+        $lt -- less than ( { $lt: number } )
+        $lte - less than or equal to ( { $lte: number } )
+        $gt -- greater than ( { $gt: number } )
+        $gte - greater than or equal to ( { $gte: number } )
+        $in -- equal to any value in the array ( { $in: [ value1, value2, ... ] } )
+        $nin - not equal to any value in the array ( { $nin: [ value1, value2, ... ] } )
 
 --- 10. Logical Operators ---
 
-Logical operators return data based on expressions that evaluate to true or false.
-Must enclose in {} to be used.
+    Logical operators return data based on expressions that evaluate to true or false.
+    Must enclose in {} to be used.
 
-Shell Commands:
-    $and - all criterias must be true ( { $and: [ { criteria1 }, { criteria2 }, ... ] } )
-    $or -- at least one of the criteras must be true ( { $or: [ { criteria1 }, { criteria2 }, ... ] } )
-    $nor - all criteras must be false ( { $nor: [ { criteria1 }, { criteria2 }, ... ] } )
-    $not - opposite of the criteria ( { $not: [ { criteria1 }, { criteria2 }, ... ] } )
-        Could be used to list documents with null values
+    Shell Commands:
+        $and - all criterias must be true ( { $and: [ { criteria1 }, { criteria2 }, ... ] } )
+        $or -- at least one of the criteras must be true ( { $or: [ { criteria1 }, { criteria2 }, ... ] } )
+        $nor - all criteras must be false ( { $nor: [ { criteria1 }, { criteria2 }, ... ] } )
+        $not - opposite of the criteria ( { $not: [ { criteria1 }, { criteria2 }, ... ] } )
+            Could be used to list documents with null values
 
 --- 11. Indexes ---
 
-An index allows for a quick lookup of a field, but takes more memory and slows insert, update, and delete operations.
-Indexes are good for searching fields that don't update frequently.
+    An index allows for a quick lookup of a field, but takes more memory and slows insert, update, and delete operations.
+    Indexes are good for searching fields that don't update frequently.
 
-Shell Commands:
-    db.collectionName.createIndex( { key: parameter } ) - creates field indexes for every document in the collection
-        .createIndex( { key: 1 } ) -- assigns indexes with the field in ascending order
-        .createIndex( { key: -1 } ) - assigns indexes with the field in descending order
-    db.collectionName.getIndexes() ---------------------- displays all indexes of a collection
-    db.collectionName.dropIndex("indexName") ------------ deletes an index of a collection
+    Shell Commands:
+        db.collectionName.createIndex( { key: parameter } ) - creates field indexes for every document in the collection
+            .createIndex( { key: 1 } ) -- assigns indexes with the field in ascending order
+            .createIndex( { key: -1 } ) - assigns indexes with the field in descending order
+        db.collectionName.getIndexes() ---------------------- displays all indexes of a collection
+        db.collectionName.dropIndex("indexName") ------------ deletes an index of a collection
 
 --- 12. Collections ---
 
-Shell Commands:
-    show collections ---------------------------------------------------- displays all collections in a database
-    db.createCollection( "collectionName", { spec1 }, { spec2 } , ... ) - creates a collection with specifications in a database
-        capped: boolean ------ whether or not there's a max size
-            size: integer - maximum size in bytes
-            max: integer -- maximum number of documents
-        autoIndexId: boolean - whether or not indexes are automatically applied to object IDs
-    db.collectionName.drop() -------------------------------------------- deletes the collection in the database
+    Shell Commands:
+        show collections ---------------------------------------------------- displays all collections in a database
+        db.createCollection( "collectionName", { spec1 }, { spec2 } , ... ) - creates a collection with specifications in a database
+            capped: boolean ------ whether or not there's a max size
+                size: integer - maximum size in bytes
+                max: integer -- maximum number of documents
+            autoIndexId: boolean - whether or not indexes are automatically applied to object IDs
+        db.collectionName.drop() -------------------------------------------- deletes the collection in the database

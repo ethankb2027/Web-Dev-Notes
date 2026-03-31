@@ -11,7 +11,9 @@
 
                 Cascading Style Sheets (CSS) --- frontend styling (style sheet language)
 
-            JavaScript (JS) -------------------- frontend functionality (programming language)
+            TypeScript (TS) -------------------- more resilient JS (statically typed superset of JS | ACTION: convert all JS to TS)
+
+                JavaScript (JS) ---------------- frontend functionality (programming language)
 
         Node.js -------------------------------- backend package (JS runtime environment)
 
@@ -19,7 +21,6 @@
 
             Prisma ----------------------------- backend database management system translator (Node.js library)
 
-        TypeScript (TS) ------------------------ more resilient JS (statically typed superset of JS | ACTION: convert all JS to TS)
 
 --------- INCOMPLETE ---------
 
@@ -53,15 +54,15 @@ Tech Stack Tutorials:
 
                 Cascading Style Sheets - https://www.youtube.com/watch?v=n4R2E7O-Ngo&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=2
 
-            JavaScript ----------------- https://www.youtube.com/watch?v=EfAl9bwzVZk&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=3
+            TypeScript ----------------- https://www.youtube.com/watch?v=gieEQFIfgYc&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=9
+
+                JavaScript ------------- https://www.youtube.com/watch?v=EfAl9bwzVZk&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=3
 
         Node.js ------------------------ https://www.youtube.com/watch?v=f2EqECiTBL8&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=5
 
             PostgreSQL ----------------- https://www.youtube.com/watch?v=qw--VYLpxG4
 
             Prisma --------------------- https://www.youtube.com/watch?v=gimSKEsWYb4
-
-        TypeScript --------------------- https://www.youtube.com/watch?v=gieEQFIfgYc&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=9
 
 Supplemental Tutorials:
     Data Structures & Algorithms - https://www.youtube.com/watch?v=CBYHwZcbD-s
@@ -75,13 +76,16 @@ Supplemental Tutorials:
 _____________________________________________________________________________________________________________________________________________________________________________________
 
 Learning Roadmap:
-    1. 
-    2.  Git & GitHub
+    1.  
+    2.  CSS
     3.  Tailwind CSS
-    4.  PostgreSQL
-    5.  RESTful APIs
-    6.  JWT Auth
-    7.  Prisma
-    8.  TypeScript
-    9.  Next.js
-    10. Checkpoints/Projects...
+    4.  JS
+    5.  TypeScript
+    6.  React
+    7.  PostgreSQL
+    8.  Prisma
+    9.  RESTful APIs
+    10. JWT Auth
+    11. Next.js
+    12. Git & GitHub
+    13. Checkpoints/Projects...

@@ -1,14 +1,41 @@
 
 NOTE: the tutorial that these notes come from utilize Java
 
+Topics Covered:
+    1. What are data structures and algorithms?
+    2. Stack Data Structures
+    3. Queue Data Structures
+    4. Priority Queue Data Structures
+    5. Linked Lists
+    6. Dynamic Arrays
+    7. Linked Lists vs Dynamic Arrays
+    8. Big O Notation
+    9. Linear Search
+    10. Binary Search
+    11. Interpolation Search
+    12. Bubble Sort
+    13. Selection Sort
+    14. Insertion Sort
+    15. Recursion
+    16. Merge Sort
+    17. Quick Sort
+    18. Hash Tables
+    19-21. Graphs
+    22. Depth First Search
+    23. Breadth First Search
+    24. Tree Data Structures
+    25. Binary Search Trees
+    26. Tree Traversal
+    27. Execution Time
+
 --- 1. What are data structures and algorithms? ---
 
-Data Structure - a named location that can be used to store and organize data
-Algorithm ------ a collection of steps to solve a problem
+    Data Structure - a named location that can be used to store and organize data
+    Algorithm ------ a collection of steps to solve a problem
 
 --- 2. Stack Data Structures ---
 
-Stack - LIFO (last-in first-out) data structure. Stores objects into a sort of "vertical tower"
+    Stack - LIFO (last-in first-out) data structure. Stores objects into a sort of "vertical tower"
     
     Methods:
         push() --- add to the top
@@ -27,7 +54,7 @@ Stack - LIFO (last-in first-out) data structure. Stores objects into a sort of "
 
 --- 3. Queue Data Structures ---
 
-Queue - FIFO (first-in first-out) data structure. A collection designed for holding elements prior to processing. Linear data structure
+    Queue - FIFO (first-in first-out) data structure. A collection designed for holding elements prior to processing. Linear data structure
     
     Methods:
         offer() ---- enqueue, adding to the tail
@@ -44,13 +71,13 @@ Queue - FIFO (first-in first-out) data structure. A collection designed for hold
 
 --- 4. Priority Queue Data Structures ---
 
-Priority Queue - a FIFO data structure that serves elements with the highest priorities first before elements with lower Priority
+    Priority Queue - a FIFO data structure that serves elements with the highest priorities first before elements with lower Priority
     
     Puts the data in ascending/alphabetical (default) or descending/reverse alphabetical (reverse) order.
 
 --- 5. Linked Lists ---
 
-Linked Lists - stores Nodes in two parts (data + address). Nodes are in non-consecutive memory locations. Elements are linked using pointers
+    Linked Lists - stores Nodes in two parts (data + address). Nodes are in non-consecutive memory locations. Elements are linked using pointers
                        
                        Singly Linked List                                        Doubly Linked List (more memory)
           Node                Node                Node                         Node                           Node
@@ -95,7 +122,7 @@ Linked Lists - stores Nodes in two parts (data + address). Nodes are in non-cons
 
 --- 6. Dynamic Arrays ---
 
-Dynamic Array - a resizable, contiguous data structure that automatically grows or shrinks in size as elements are added or removed
+    Dynamic Array - a resizable, contiguous data structure that automatically grows or shrinks in size as elements are added or removed
 
     Methods:
         add()
@@ -132,7 +159,7 @@ Dynamic Array - a resizable, contiguous data structure that automatically grows 
 
 --- 8. Big O Notation ---
 
-Big O Notation - describes the performance of an algorithm as the amount of data increases
+    Big O Notation - describes the performance of an algorithm as the amount of data increases
     
     "How code slows as data grows."
     Machine independent (# of steps to completion).
@@ -162,7 +189,7 @@ Big O Notation - describes the performance of an algorithm as the amount of data
 
 --- 9. Linear Search ---
 
-Linear Search - iterate through a collection one element at a time
+    Linear Search - iterate through a collection one element at a time
 
     Runtime complexity of O(n).
 
@@ -176,7 +203,7 @@ Linear Search - iterate through a collection one element at a time
 
 --- 10. Binary Search ---
 
-Binary Search - a search algorithm that finds the position of a target value within a sorted array. Half of the array is eliminated during each "step"
+    Binary Search - a search algorithm that finds the position of a target value within a sorted array. Half of the array is eliminated during each "step"
 
     Runtime complexity of O(log n).
 
@@ -189,14 +216,14 @@ Binary Search - a search algorithm that finds the position of a target value wit
 
 --- 11. Interpolation Search ---
 
-Interpolation Search - improvement over binary search best used for "uniformly" distributed data. "Guesses" where a value might be based on calculated probe results.
+    Interpolation Search - improvement over binary search best used for "uniformly" distributed data. "Guesses" where a value might be based on calculated probe results.
                        If probe is incorrect, search area is narrowed, and a new probe is calculated
 
     Runtime complexity of O(log(log(n))) (average case) or O(n) (worst case, values increase exponentially).
 
 --- 12. Bubble Sort ---
 
-Bubble Sort - pairs of adjacent elements are compared, and the elements swap if they are not in order
+    Bubble Sort - pairs of adjacent elements are compared, and the elements swap if they are not in order
 
     Runtime complexity of O(n^2).
 
@@ -208,7 +235,7 @@ Bubble Sort - pairs of adjacent elements are compared, and the elements swap if 
 
 --- 13. Selection Sort ---
 
-Selection Sort - search through an array and keep track of the minimum value during each iteration. At the end of the iteration, we swap variables
+    Selection Sort - search through an array and keep track of the minimum value during each iteration. At the end of the iteration, we swap variables
 
     Runtime complexity of O(n^2).
 
@@ -220,7 +247,7 @@ Selection Sort - search through an array and keep track of the minimum value dur
 
 --- 14. Insertion Sort ---
 
-Insertion Sort - after comparing elements to the left. Shift elements to the right to make room to insert a value
+    Insertion Sort - after comparing elements to the left. Shift elements to the right to make room to insert a value
 
     Runtime complexity of O(n^2).
 
@@ -233,7 +260,7 @@ Insertion Sort - after comparing elements to the left. Shift elements to the rig
 
 --- 15. Recursion ---
 
-Recursion - apply the result of a procedure to a procedure
+    Recursion - apply the result of a procedure to a procedure
 
     A recursive method calls itself. Can be a substitute for iteration.
     Divide a problem into sub-problems of the same type as the original.
@@ -261,7 +288,7 @@ Recursion - apply the result of a procedure to a procedure
 
 --- 16. Merge Sort ---
 
-Merge Sort - recursively divide array in two, sort, re-combine
+    Merge Sort - recursively divide array in two, sort, re-combine
 
     Runtime complexity of O(n log n).
 
@@ -275,7 +302,7 @@ Merge Sort - recursively divide array in two, sort, re-combine
 
 --- 17. Quick Sort ---
 
-Quick Sort - moves smaller elements to the left of a pivot. Recursively divides array in two partitions.
+    Quick Sort - moves smaller elements to the left of a pivot. Recursively divides array in two partitions.
              The pivot is typically at the end of the array, but can be located at the beginning or middle
 
     Runtime complexity of O(n log n) (best and average case) or O(n^2) (worst case if already sorted).
@@ -290,7 +317,7 @@ Quick Sort - moves smaller elements to the left of a pivot. Recursively divides 
 
 --- 18. Hash Tables ---
 
-Hash Table - a data structure that stores unique keys to values (ex. <int, str>). Each key/value pair is known as an Entry.
+    Hash Table - a data structure that stores unique keys to values (ex. <int, str>). Each key/value pair is known as an Entry.
              FAST insertion, look up, deletion of key/value pairs. Not ideal for small data sets, great with large data sets
 
     Hashing --- takes a key and computes an integer (formula will vary based on key & data type). In a Hash Table, we use the hash %
@@ -302,7 +329,7 @@ Hash Table - a data structure that stores unique keys to values (ex. <int, str>)
 
 --- 19-21. Graphs ---
 
-Graph - a nonlinear aggregation of nodes and edges. Can be used to model a network
+    Graph - a nonlinear aggregation of nodes and edges. Can be used to model a network
 
     Node ------ also known as a vertex, may contain some piece of data
     Edge ------ a connection between two nodes
@@ -321,7 +348,7 @@ Graph - a nonlinear aggregation of nodes and edges. Can be used to model a netwo
 
 --- 22. Depth First Search ---
 
-Depth First Search (DFS) - a search algorithm for traversing a tree or graph data structure (utilizes a stack)
+    Depth First Search (DFS) - a search algorithm for traversing a tree or graph data structure (utilizes a stack)
 
     Procedure:
         1. Pick a route
@@ -334,7 +361,7 @@ Depth First Search (DFS) - a search algorithm for traversing a tree or graph dat
 
 --- 23. Breadth First Search ---
 
-Breadth First Search (BFS) - a search algorithm for traversing a tree or graph data structure (utilizes a queue)
+    Breadth First Search (BFS) - a search algorithm for traversing a tree or graph data structure (utilizes a queue)
 
     Procedure:
         When compared to DFS, BFS is done one "level" at a time rather than one "branch" at a time.
@@ -344,7 +371,7 @@ Breadth First Search (BFS) - a search algorithm for traversing a tree or graph d
 
 --- 24. Tree Data Structures ---
 
-Tree - a non-linear data structure where nodes are organized in a hierarchy (ex. file explorer, databases, DNS, HTML DOM)
+    Tree - a non-linear data structure where nodes are organized in a hierarchy (ex. file explorer, databases, DNS, HTML DOM)
 
     Root Node --- top of the tree with only outgoing edges
     Leaf Node --- bottom of the tree with only incoming edges
@@ -359,21 +386,22 @@ Tree - a non-linear data structure where nodes are organized in a hierarchy (ex.
 
 --- 25. Binary Search Trees ---
 
-Binary Tree -------- a tree data structure comprised of nodes with no more than two children nodes
-Binary Search Tree - similar to the binary tree structure, but parent nodes are greater than the left child node and less than the right child node
+    Binary Tree -------- a tree data structure comprised of nodes with no more than two children nodes
+    Binary Search Tree - similar to the binary tree structure, but parent nodes are greater than the left child node and less than the right child node
+    
     Benefit:          easy to locate a node when they are in this order
     Time complexity:  O(log n) (best case) or O(n) (worst case)
     Space complexity: O(n)
 
 --- 26. Tree Traversal ---
 
-Tree Traversal - the process of visiting all nodes of a tree
+    Tree Traversal - the process of visiting all nodes of a tree
 
-Types of tree traversal methods:
-    In-order --- left -> root -> right
-    Post-order - left -> right -> root (from leaf to root)
-    Pre-order -- root -> left -> right (common for copying trees)
+    Types of tree traversal methods:
+        In-order --- left -> root -> right
+        Post-order - left -> right -> root (from leaf to root)
+        Pre-order -- root -> left -> right (common for copying trees)
 
 --- 27. Execution Time ---
 
-Java - System.nanoTime()
+    Java - System.nanoTime()

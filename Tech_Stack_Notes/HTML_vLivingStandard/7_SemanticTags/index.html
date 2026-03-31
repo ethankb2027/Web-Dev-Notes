@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Ethan Bui">
+        <meta name="description" content="All credit to Dave Gray and Bro Code for teaching me HTML.">
+        <link rel="icon" href="html5.png" type="image/x-icon">
+
+        <title>My First Web Page</title>
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+
+    <body>
+        <header>
+            <h1>My Goals for the Year</h1>
+
+            <nav aria-label="primary-navigation">
+                <ul>
+                    <li><a href="#html">Learning HTML</a></li>
+                    <li><a href="#vacation">Planning a Vacation</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <hr>
+
+        <main>
+            <article id="html">
+                <h2>I'm Ready to Learn HTML</h2>
+                <p>This is my first web page.</p>
+                <section>
+                    <h3>HTML5</h3>
+                    <img src="img/html_logo_300x300.png" alt="HTML5 Logo" title="I am learning HTML" width="300" height="300">
+                    
+                    <figure>
+                        <figcaption>An example of HTML5 code</figcaption>
+                        <p>
+                            <code>&lt;h1&gt;Hello World!&lt;h1&gt;</code>
+                        </p>
+                    </figure>
+                </section>
+                <section>
+                    <h3>My Daily Schedule</h3>
+                    <p>Let me tell you how:</p>
+                    <ol>
+                        <li>...I learn more about web dev.</li>
+                        <li>...I plan out my schedule.</li>
+                        <li>...I use resources from <abbr title="Mozilla Developer Network"><a href="https://developer.mozilla.org/">MDN</a></abbr>.</li>
+                    </ol>
+                    <aside>
+                        <details>
+                            <summary>Guess the hardest level I've beaten in <mark>Geometry Dash</mark>.</summary>
+                            <p>Cataclysm (as of <time datetime="2026-03-31">Mar 31, 2026</time>)</p>
+                        </details>
+                    </aside>
+                </section>
+            </article>
+
+            <hr>
+
+            <article id="vacation">
+                <h2>I Am Also Planning a Vacation</h2>
+                <p>You know, <em>Miami Florida</em> is quite nice.</p>
+                <p>Some say it's overrated, but I think it's the best vacation spot.</p>
+
+                <section>
+                    <h3>Places I'd Like to Visit</h3>
+                    <ul>
+                        <li>
+                            <p>Other places that seem nice to visit are Paris, Alaska, and Tokyo.</p>
+                            <figure>
+                                <img src="img/caribbean.jpg" alt="Caribbean Beach" title="This is the Caribbean Beach." width="400" height="225" loading="lazy">
+                                <figcaption>Caribbean Beach Getaway</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <p>I've also good things about this place:</p>
+                            <address>
+                                Margaritaville Island Reserve Riviera Cancún<br>
+                                Bahia Petempich Puerto Morelos, Mexico<br>
+                                Colonia Morelos, México 77580
+                            </address>
+                            <figure>
+                                <img src="img/vacation.jpg" alt="Cancun Vacation" title="It's 5 o'clock somewhere!" width="400" height="267" loading="lazy">
+                                <figcaption>A Caribbean Vacation Image</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <!-- TODO: Add more places -->
+                    <!-- NOTE: Avoid using div and span elements since they add no semantic meaning -->
+                    <h3>Places I'll Avoid</h3>
+                    <p>Anywhere <strong>above 90 degrees Fahrenheit and humid</strong>.</p>
+                    <dl>
+                        <dt>The Sahara Desert</dt>
+                        <dd>Heard this place is pretty hot.</dd>
+
+                        <dt>The Sun</dt>
+                        <dd>Heard this place is also pretty hot.</dd>
+                    </dl>
+                </section>
+            </article>
+        </main>
+        
+        <hr>
+
+        <footer>
+            <p>&lt;&lt;&lt; &copy; <a href="about.html">Ethan Bui</a> &gt;&gt;&gt;</p>
+
+            <p><a href="#">Back to Top</a></p>
+        </footer>
+    </body>
+</html>
