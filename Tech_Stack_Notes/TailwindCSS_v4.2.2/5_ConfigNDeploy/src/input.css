@@ -1,23 +1,27 @@
 @import "tailwindcss";
 
-@keyframes open-menu {
-  0% {
-    transform: scaleY(0);
+@theme {
+  --animate-open-menu: open-menu 0.5s ease-in-out forwards;
+
+  @keyframes open-menu {
+    0% {
+      transform: scaleY(0);
+    }
+
+    80% {
+      transform: scaleY(1.2);
+    }
+
+    100% {
+      transform: scaleY(1);
+    }
   }
 
-  80% {
-    transform: scaleY(1.2);
-  }
-
-  100% {
-    transform: scaleY(1);
-  }
-}
-
-.animate-open-menu {
-  animation: open-menu 0.5s ease-in-out forwards;
+  --color-papayawhip: #ffefd5;
+  --color-papayawhip-light: #fef4e4;
+  --color-papayawhip-dark: #fee5bc;
 }
 
 .toggle-btn {
-  @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-720;
+  @apply [&>div]:rotate-720 [&>div]:bg-transparent [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div::before]:translate-y-0 [&>div::before]:rotate-45;
 }

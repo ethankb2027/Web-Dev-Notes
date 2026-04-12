@@ -46,6 +46,7 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --animate-open-menu: open-menu 0.5s ease-in-out forwards;
   }
 }
 @layer base {
@@ -280,6 +281,9 @@
   }
   .origin-top {
     transform-origin: top;
+  }
+  .animate-open-menu {
+    animation: var(--animate-open-menu);
   }
   .cursor-pointer {
     cursor: pointer;
@@ -860,20 +864,6 @@
     }
   }
 }
-@keyframes open-menu {
-  0% {
-    transform: scaleY(0);
-  }
-  80% {
-    transform: scaleY(1.2);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
-.animate-open-menu {
-  animation: open-menu 0.5s ease-in-out forwards;
-}
 .toggle-btn {
   &>div {
     rotate: 720deg;
@@ -1018,6 +1008,17 @@
 @property --tw-skew-y {
   syntax: "*";
   inherits: false;
+}
+@keyframes open-menu {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.2);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
