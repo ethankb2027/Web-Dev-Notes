@@ -1,0 +1,51 @@
+<!--
+  In this lesson, learned...
+    ...load JavaScript inside an HTML file with <script> and onclick=""
+    ...comments
+    ...console.log
+-->
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>JS Console Log</title>
+
+    <style>
+      .red-button {
+        background-color: red;
+        color: white;
+        border: none;
+      }
+
+      .yellow-button {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button title="Goob job!" class="red-button" onclick="alert('Goob job!')">
+      hello
+    </button>
+
+    <p>paragraph of <button class="yellow-button">hello</button> text</p>
+
+    <script>
+      // This is a single-line comment
+
+      /* 
+        This 
+        is a 
+        multi-line 
+        comment
+      */
+
+      console.log(2 + 2);
+      console.log("some" + "text");
+    </script>
+  </body>
+</html>

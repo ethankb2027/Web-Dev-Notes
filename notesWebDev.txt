@@ -11,7 +11,7 @@
 
                 Cascading Style Sheets (CSS) --- frontend styling (style sheet language)
 
-            TypeScript (TS) -------------------- more resilient JS (statically typed superset of JS | ACTION: convert all JS to TS)
+            TypeScript (TS) -------------------- more resilient JS (statically typed superset of JS)
 
                 JavaScript (JS) ---------------- frontend functionality (programming language)
 
@@ -40,13 +40,13 @@
         GitHub Actions?
         Ansible?
         Terraform?
-_____________________________________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________
 
 Tech Stack Tutorials:
 
     Next.js ---------------------------- https://www.youtube.com/watch?v=843nec-IvW0&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=10
 
-        React -------------------------- https://www.youtube.com/watch?v=RVFAyFWO4go&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=4
+        React -------------------------- https://www.youtube.com/watch?v=TtPXvEcE11E&list=PLEPye7A7EcQZrT3VSBb7jtxnxIfY3yyG6&index=4
  
             HyperText Markup Language -- https://www.youtube.com/watch?v=mJgBOIoGihA&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=1
 
@@ -56,7 +56,7 @@ Tech Stack Tutorials:
 
             TypeScript ----------------- https://www.youtube.com/watch?v=gieEQFIfgYc&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=9
 
-                JavaScript ------------- https://www.youtube.com/watch?v=EfAl9bwzVZk&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=3
+                JavaScript ------------- https://www.youtube.com/watch?v=EerdGm-ehJQ&list=PLEPye7A7EcQZrT3VSBb7jtxnxIfY3yyG6&index=3
 
         Node.js ------------------------ https://www.youtube.com/watch?v=f2EqECiTBL8&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=5
 
@@ -73,7 +73,7 @@ Supplemental Tutorials:
     PHP -------------------------- https://www.youtube.com/watch?v=zZ6vybT1HQs&list=PLZPZq0r_RZOPP5Yjt6IqgytMRY5uLt4y3&index=6
     RESTful APIs ----------------- https://www.youtube.com/playlist?list=PLWPirh4EWFpGRdVZcQCzeTXFBNSTDAdQX
     JWT Auth --------------------- https://www.youtube.com/playlist?list=PL4cUxeGkcC9iqqESP8335DA5cRFp8loyp
-_____________________________________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________
 
 Learning Roadmap:
     1.  

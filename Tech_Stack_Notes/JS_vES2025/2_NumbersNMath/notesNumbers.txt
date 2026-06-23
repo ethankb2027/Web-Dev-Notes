@@ -1,0 +1,6 @@
+In this lesson, learned...
+    ...numbers and math
+    ...order of operations and brackets
+    ...calculations using floats can be inaccurate
+    ...Math.round()
+    ...how to search for code

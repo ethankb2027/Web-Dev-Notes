@@ -1,0 +1,5 @@
+In this lesson, learned...
+    ...JS is giving instructions to a computer
+    ...how to write JS code
+    ...how to run code using the console
+    ...syntax

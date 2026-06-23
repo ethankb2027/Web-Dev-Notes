@@ -1,0 +1,6 @@
+In this lesson, learned...
+    ...string = text
+    ...how to use strings and numbers together
+    ...the three ways to create strings: '...' | "..." | `...` (template strings)
+    ...escape characters: \' | \n
+    ...features of template strings: interpolation and multi-line strings
