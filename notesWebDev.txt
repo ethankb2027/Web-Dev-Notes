@@ -80,8 +80,8 @@ Learning Roadmap:
     2.  
     3.  
     4.  
-    5.  TypeScript
-    6.  React
+    5.  
+    6.  
     7.  PostgreSQL
     8.  Prisma
     9.  RESTful APIs
