@@ -60,7 +60,7 @@ Tech Stack Tutorials:
 
         Node.js ------------------------ https://www.youtube.com/watch?v=f2EqECiTBL8&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=5
 
-            PostgreSQL ----------------- https://www.youtube.com/watch?v=qw--VYLpxG4
+            PostgreSQL ----------------- https://www.youtube.com/watch?v=85pG_pDkITY
 
             Prisma --------------------- https://www.youtube.com/watch?v=gimSKEsWYb4
 
@@ -82,7 +82,7 @@ Learning Roadmap:
     4.  
     5.  
     6.  
-    7.  PostgreSQL
+    7.  
     8.  Prisma
     9.  RESTful APIs
     10. JWT Auth
