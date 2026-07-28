@@ -1,7 +1,7 @@
 
 "THE Joyless JavaScript" Tech Stack (as of 21 Mar 2026):
     
-    Next.js ------------------------------------ full stack package (React framework)
+    NextJS ------------------------------------ full stack package (React framework)
     
         React ---------------------------------- frontend package (JS library)
 
@@ -15,11 +15,11 @@
 
                 JavaScript (JS) ---------------- frontend functionality (programming language)
 
-        Node.js -------------------------------- backend package (JS runtime environment)
+        NodeJS -------------------------------- backend package (JS runtime environment)
 
             PostgreSQL ------------------------- backend database management system (object-relational database management system)
 
-            Prisma ----------------------------- backend database management system translator (Node.js library)
+            Prisma ----------------------------- backend database management system translator (NodeJS library)
 
 
 --------- INCOMPLETE ---------
@@ -44,7 +44,7 @@ ________________________________________________________________________________
 
 Tech Stack Tutorials:
 
-    Next.js ---------------------------- https://www.youtube.com/watch?v=843nec-IvW0&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=10
+    Next.js ---------------------------- https://www.youtube.com/watch?v=I1V9YWqRIeI
 
         React -------------------------- https://www.youtube.com/watch?v=TtPXvEcE11E&list=PLEPye7A7EcQZrT3VSBb7jtxnxIfY3yyG6&index=4
  
