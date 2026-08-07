@@ -1,6 +1,8 @@
 
 "THE Joyless JavaScript" Tech Stack (as of 21 Mar 2026):
     
+    Vercel
+    
     NextJS ------------------------------------ full stack package (React framework)
     
         React ---------------------------------- frontend package (JS library)
@@ -20,6 +22,12 @@
             PostgreSQL ------------------------- backend database management system (object-relational database management system)
 
             Prisma ----------------------------- backend database management system translator (NodeJS library)
+
+            NextAuth
+
+            Neon
+
+            Stripe
 
 
 --------- INCOMPLETE ---------
