@@ -1,9 +1,7 @@
 
 "THE Joyless JavaScript" Tech Stack (as of 21 Mar 2026):
     
-    Vercel
-    
-    NextJS ------------------------------------ full stack package (React framework)
+    NextJS ------------------------------------- full stack package (React framework)
     
         React ---------------------------------- frontend package (JS library)
 
@@ -13,87 +11,18 @@
 
                 Cascading Style Sheets (CSS) --- frontend styling (style sheet language)
 
-            TypeScript (TS) -------------------- more resilient JS (statically typed superset of JS)
+            TypeScript (TS) -------------------- frontend resilient functionality (statically typed superset of JS)
 
                 JavaScript (JS) ---------------- frontend functionality (programming language)
 
-        NodeJS -------------------------------- backend package (JS runtime environment)
+            Shadcn UI -------------------------- frontend UI (component collection)
 
-            PostgreSQL ------------------------- backend database management system (object-relational database management system)
+        Convex --------------------------------- backend package (BaaS)
 
-            Prisma ----------------------------- backend database management system translator (NodeJS library)
+            Clerk ------------------------------ backend authentication/authorization and payment processing service (API)
 
-            NextAuth
+DevOps
 
-            Neon
+    Vercel --- deployment platform
 
-            Stripe
-
-
---------- INCOMPLETE ---------
-
-    Additional APIs/Services
-
-        NextAuth.js --- authentication library for Next.js
-
-    DevOps
-
-        Deployment
-
-            Vercel - Next.js deployment
-
-            Supabase - database hosting
-
-        Monit?
-        GitHub Actions?
-        Ansible?
-        Terraform?
-_________________________________________________________________________________________________________________________________________________________________________
-
-Tech Stack Tutorials:
-
-    Next.js ---------------------------- https://www.youtube.com/watch?v=I1V9YWqRIeI
-
-        React -------------------------- https://www.youtube.com/watch?v=TtPXvEcE11E&list=PLEPye7A7EcQZrT3VSBb7jtxnxIfY3yyG6&index=4
- 
-            HyperText Markup Language -- https://www.youtube.com/watch?v=mJgBOIoGihA&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=1
-
-            Tailwind CSS --------------- https://www.youtube.com/watch?v=lCxcTsOHrjo&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=8
-
-                Cascading Style Sheets - https://www.youtube.com/watch?v=n4R2E7O-Ngo&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=2
-
-            TypeScript ----------------- https://www.youtube.com/watch?v=gieEQFIfgYc&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=9
-
-                JavaScript ------------- https://www.youtube.com/watch?v=EerdGm-ehJQ&list=PLEPye7A7EcQZrT3VSBb7jtxnxIfY3yyG6&index=3
-
-        Node.js ------------------------ https://www.youtube.com/watch?v=f2EqECiTBL8&list=PL0Zuz27SZ-6M1Uopt6_VL3gf3cpMnwavm&index=5
-
-            PostgreSQL ----------------- https://www.youtube.com/watch?v=85pG_pDkITY
-
-            Prisma --------------------- https://www.youtube.com/watch?v=gimSKEsWYb4
-
-Supplemental Tutorials:
-    Data Structures & Algorithms - https://www.youtube.com/watch?v=CBYHwZcbD-s
-    Git & GitHub ----------------- https://www.youtube.com/watch?v=rH3zE7VlIMs
-    MongoDB ---------------------- https://www.youtube.com/watch?v=c2M-rlkkT5o&list=PLZPZq0r_RZOPP5Yjt6IqgytMRY5uLt4y3&index=4
-    MySQL ------------------------ https://www.youtube.com/watch?v=5OdVJbNCSso&list=PLZPZq0r_RZOPP5Yjt6IqgytMRY5uLt4y3&index=5
-    npm -------------------------- https://www.youtube.com/watch?v=cjoTTSbOuG0
-    PHP -------------------------- https://www.youtube.com/watch?v=zZ6vybT1HQs&list=PLZPZq0r_RZOPP5Yjt6IqgytMRY5uLt4y3&index=6
-    RESTful APIs ----------------- https://www.youtube.com/playlist?list=PLWPirh4EWFpGRdVZcQCzeTXFBNSTDAdQX
-    JWT Auth --------------------- https://www.youtube.com/playlist?list=PL4cUxeGkcC9iqqESP8335DA5cRFp8loyp
-_________________________________________________________________________________________________________________________________________________________________________
-
-Learning Roadmap:
-    1.  
-    2.  
-    3.  
-    4.  
-    5.  
-    6.  
-    7.  
-    8.  Prisma
-    9.  RESTful APIs
-    10. JWT Auth
-    11. Next.js
-    12. Git & GitHub
-    13. Checkpoints/Projects...
+    Convex Cloud ----- database hosting platform
